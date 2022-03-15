@@ -16,7 +16,6 @@ namespace testApp.Controllers
 
         private readonly imyservice _myservice;
 
-
         public HomeController(ILogger<HomeController> logger, imyservice myservice)
         {
             _logger = logger;
@@ -26,10 +25,8 @@ namespace testApp.Controllers
         public IActionResult Index()
         {
 
-            // myservice ms = new myservice();
 
             Product id = _myservice.GetProducts();
-
 
             return View();
         }
