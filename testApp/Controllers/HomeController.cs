@@ -25,6 +25,8 @@ namespace testApp.Controllers
         public IActionResult Index()
         {
 
+            // new comment
+            // myservice ms = new myservice();
 
             Product id = _myservice.GetProducts();
 
