@@ -24,6 +24,13 @@ namespace testApp.Controllers
 
         public IActionResult Index()
         {
+
+            string c = DataSettingsManager.Loadsettings().ConnectionString;
+
+
+            string d = DataSettingsManager.Loadsettings().ConnectionString;
+
+
             // Another new comment
             // new comment
             // myservice ms = new myservice();
