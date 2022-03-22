@@ -42,6 +42,8 @@ namespace testApp.Controllers
 
         public IActionResult Privacy()
         {
+            string c = DataSettingsManager.Loadsettings().ConnectionString;
+
             return View();
         }
 
