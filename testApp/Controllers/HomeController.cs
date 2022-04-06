@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,14 +17,16 @@ namespace testApp.Controllers
 
         private readonly imyservice _myservice;
 
-
         private readonly Settings _settings;
 
-        public HomeController(ILogger<HomeController> logger, imyservice myservice, Settings settings)
+        //public HomeController(ILogger<HomeController> logger, imyservice myservice, Settings settings)
+
+
+        public HomeController(ILogger<HomeController> logger, imyservice myservice, IOptionsMonitor<Settings> settingsMonitor)
         {
             _logger = logger;
             _myservice = myservice;
-            _settings = settings;
+            _settings = settingsMonitor.CurrentValue;
         }
 
         public IActionResult Index()
