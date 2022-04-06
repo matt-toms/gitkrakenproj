@@ -34,7 +34,8 @@ namespace testApp.Code
         {
             if (!optionsBuilder.IsConfigured)
             {
-                var connectionString = "Data Source=localhost\\mattdb;User ID=sa;Password=123;Initial Catalog=testdb;Integrated Security=True;Persist Security Info=False;MultipleActiveResultSets=False;";
+                var connectionString = "Data Source=localhost\\mattdb;User ID=sa;Password=123;Initial Catalog=testdb;Persist Security Info=False;MultipleActiveResultSets=False;";
+
 
                 optionsBuilder.UseSqlServer(connectionString);
                 //  optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));

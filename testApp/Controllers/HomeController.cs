@@ -16,24 +16,27 @@ namespace testApp.Controllers
 
         private readonly imyservice _myservice;
 
-        public HomeController(ILogger<HomeController> logger, imyservice myservice)
+
+        private readonly Settings _settings;
+
+        public HomeController(ILogger<HomeController> logger, imyservice myservice, Settings settings)
         {
             _logger = logger;
             _myservice = myservice;
+            _settings = settings;
         }
 
         public IActionResult Index()
         {
 
-            string c = DataSettingsManager.Loadsettings().ConnectionString;
+            // string c = DataSettingsManager.Loadsettings().ConnectionString;
 
 
-            string d = DataSettingsManager.Loadsettings().ConnectionString;
+            // string d = DataSettingsManager.Loadsettings().ConnectionString;
+
+            var url = _settings.imagefolder;
 
 
-            // Another new comment
-            // new comment
-            // myservice ms = new myservice();
 
             Product id = _myservice.GetProducts();
 
