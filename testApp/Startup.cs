@@ -40,13 +40,15 @@ namespace testApp
 
 
 
-            Settings Settings = new Settings();
-            Configuration.GetSection("settings").Bind(Settings);
+            //Settings Settings = new Settings();
+            //Configuration.GetSection("settings").Bind(Settings);
 
             //Create singleton from instance
-            services.AddSingleton<Settings>(Settings);
+            // services.AddSingleton<Settings>(Settings);
 
+            // https://medium.com/@dozieogbo/a-better-way-to-inject-appsettings-in-asp-net-core-96be36ffa22b
 
+            services.Configure<Settings>(Configuration.GetSection("settings"));
 
         }
 
@@ -59,7 +61,6 @@ namespace testApp
             builder.RegisterType<MattContext>().As<MattContext>().InstancePerDependency();
 
             builder.RegisterGeneric(typeof(EntityRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
-
 
             builder.RegisterType<myservice>().As<imyservice>().InstancePerLifetimeScope();
 
