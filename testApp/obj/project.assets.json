@@ -6462,7 +6462,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SITLocal\\.nuget\\packages\\": {}
+    "C:\\Users\\MattToms\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -6470,11 +6470,11 @@
       "projectUniqueName": "C:\\inetpub\\wwwroot\\gitkrakenproj\\testApp\\testApp.csproj",
       "projectName": "testApp",
       "projectPath": "C:\\inetpub\\wwwroot\\gitkrakenproj\\testApp\\testApp.csproj",
-      "packagesPath": "C:\\Users\\SITLocal\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\MattToms\\.nuget\\packages\\",
       "outputPath": "C:\\inetpub\\wwwroot\\gitkrakenproj\\testApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SITLocal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MattToms\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

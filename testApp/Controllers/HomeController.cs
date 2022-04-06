@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,17 +17,29 @@ namespace testApp.Controllers
 
         private readonly imyservice _myservice;
 
-        public HomeController(ILogger<HomeController> logger, imyservice myservice)
+        private readonly Settings _settings;
+
+        //public HomeController(ILogger<HomeController> logger, imyservice myservice, Settings settings)
+
+
+        public HomeController(ILogger<HomeController> logger, imyservice myservice, IOptionsMonitor<Settings> settingsMonitor)
         {
             _logger = logger;
             _myservice = myservice;
+            _settings = settingsMonitor.CurrentValue;
         }
 
         public IActionResult Index()
         {
-            // Another new comment
-            // new comment
-            // myservice ms = new myservice();
+
+            // string c = DataSettingsManager.Loadsettings().ConnectionString;
+
+
+            // string d = DataSettingsManager.Loadsettings().ConnectionString;
+
+            var url = _settings.imagefolder;
+
+
 
             Product id = _myservice.GetProducts();
 
@@ -35,6 +48,8 @@ namespace testApp.Controllers
 
         public IActionResult Privacy()
         {
+            string c = DataSettingsManager.Loadsettings().ConnectionString;
+
             return View();
         }
 
