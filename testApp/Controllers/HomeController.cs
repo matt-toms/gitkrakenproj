@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MetadataExtractor;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -16,34 +17,38 @@ namespace testApp.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private readonly imyservice _myservice;
-
+        private readonly IOptionsMonitor<Settings> settingsMonitor;
+        private readonly string test;
         private readonly Settings _settings;
+
+
 
         //public HomeController(ILogger<HomeController> logger, imyservice myservice, Settings settings)
 
 
         public HomeController(ILogger<HomeController> logger, imyservice myservice, IOptionsMonitor<Settings> settingsMonitor)
         {
+
             _logger = logger;
             _myservice = myservice;
+            this.settingsMonitor = settingsMonitor;
             _settings = settingsMonitor.CurrentValue;
         }
+
+
+
+
+
 
         public IActionResult Index()
         {
 
-            // string c = DataSettingsManager.Loadsettings().ConnectionString;
 
+            var imagePath = @"C:\inetpub\wwwroot\testApp\testApp\wwwroot\images\alw.jpg";
 
-            // string d = DataSettingsManager.Loadsettings().ConnectionString;
+            var directories = ImageMetadataReader.ReadMetadata(imagePath);
 
-            var url = _settings.imagefolder;
-
-
-
-            Product id = _myservice.GetProducts();
-
-            return View();
+            return View(directories);
         }
 
         public IActionResult Privacy()

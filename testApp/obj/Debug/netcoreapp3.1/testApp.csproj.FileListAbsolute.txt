@@ -178,3 +178,5 @@ C:\inetpub\wwwroot\gitkrakenproj\testApp\obj\Debug\netcoreapp3.1\testApp.csproj.
 C:\inetpub\wwwroot\gitkrakenproj\testApp\obj\Debug\netcoreapp3.1\testApp.dll
 C:\inetpub\wwwroot\gitkrakenproj\testApp\obj\Debug\netcoreapp3.1\testApp.pdb
 C:\inetpub\wwwroot\gitkrakenproj\testApp\obj\Debug\netcoreapp3.1\testApp.genruntimeconfig.cache
+C:\inetpub\wwwroot\gitkrakenproj\testApp\bin\Debug\netcoreapp3.1\MetadataExtractor.dll
+C:\inetpub\wwwroot\gitkrakenproj\testApp\bin\Debug\netcoreapp3.1\XmpCore.dll

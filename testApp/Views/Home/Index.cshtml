@@ -2,22 +2,43 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+
+@using MetadataExtractor;
+@model IReadOnlyList<Directory>;
+
+
+
+    <style>
+    #tbl td{
+        padding-right: 10px;
+    }
+    </style>
+
+<div>
     <h1 class="display-4">Welcome Matt</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-    <a href="/help">Help</a>
-
-    <a href="/menu">Menu</a>
-
-      <a href="/menu">Menu 3</a>
+    <p>Meta data for an image.</p>
 
 
-            <a href="/menu">Menu 4</a>
+    <img src="/images/alw.jpg" />
+    <table id="tbl">
+
+    @{
 
 
-                 <a href="/menu">Menu 5</a>
 
+        // print out all metadata
+        foreach (var directory in Model){
+            foreach (var tag in directory.Tags)
+            {
+                        <tr><td>@directory.Name</td><td>@tag.Name</td><td>@tag.Description</td></tr>
+
+            }
+        }
+
+
+    }
+
+</table>
 
 
 </div>
