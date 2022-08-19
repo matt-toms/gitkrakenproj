@@ -29,19 +29,20 @@ namespace testApp.Controllers
         public HomeController(ILogger<HomeController> logger, imyservice myservice, IOptionsMonitor<Settings> settingsMonitor)
         {
 
-            _logger = logger;
-            _myservice = myservice;
-            this.settingsMonitor = settingsMonitor;
-            _settings = settingsMonitor.CurrentValue;
-        }
-
-
-
-
-
-
         public IActionResult Index()
-        {
+        {
+
+    
+            // Comment 1
+            // Comment 2
+            // Comment 3
+
+
+            var url = _settings.imagefolder;
+
+
+
+            Product id = _myservice.GetProducts();
 
 
             var imagePath = @"C:\inetpub\wwwroot\testApp\testApp\wwwroot\images\alw.jpg";

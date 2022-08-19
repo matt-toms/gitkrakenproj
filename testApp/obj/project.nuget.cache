@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "6Fz5aI4g0jk6pCxvDVmzoI46o+U0bjT7AA+I9ocdVz/5pba2H8DYKQZbeVgHF1nnM6g3DivdQJcGj8IpsSURfw==",
+=======
+  "dgSpecHash": "ro9I1EMic3hfOOl9snBOIteGvN3nLe/mmuW5wZm3KXE/rRKg4ibA7F2IgdT4donvyS1NMhCT8u9q3tVYPAFT7g==",
+>>>>>>> Hi_Matty
   "success": true,
   "projectFilePath": "C:\\inetpub\\wwwroot\\gitkrakenproj\\testApp\\testApp.csproj",
   "expectedPackageFiles": [
